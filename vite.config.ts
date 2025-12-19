@@ -4,6 +4,9 @@ import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
+console.log(__dirname, resolve(__dirname, 'index.html'));
+
+
 // https://vite.dev/config/
 export default defineConfig({
   base: '/ts-homework-2/',
@@ -17,10 +20,10 @@ export default defineConfig({
     target: 'esnext',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
+        main: 'index.html',
       },
       output: {
-        dir: resolve(__dirname, 'dist'),
+        dir: 'dist',
       },
     },
   },
